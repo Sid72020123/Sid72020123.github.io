@@ -1,0 +1,12 @@
+<div class = "header">
+            <img src = "logo.svg" width = "100" height = "100" style="border:10px solid black; float:left; margin-right: 10px; margin-left: 10px; border-radius: 10px;">
+            <font size = "10" color = "blue">
+                Programming with Siddhesh!
+            </font><br><font color = "green" size = "5">Home Page</font><br><br>
+           <a href = "index.html">Home</a>
+            <a href = "learn_programming.html">Learn Programming</a>
+            <a href = "calculator.html">Calculator</a>
+            <a href = "video_tutorials.html">Video Tutorials</a>
+            <a href = "games.html">Games</a>
+            <a href = "help.html">Help</a>
+        </div><br>

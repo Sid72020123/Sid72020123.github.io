@@ -1,0 +1,4 @@
+<center>
+    <a class = "tutorial_button" href = "html_head_tag.html">Next &gt;&gt;</a>
+    <a class = "tutorial_button" href = "html_index.html">&lt;&lt; Previous</a>
+</center>
