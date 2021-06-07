@@ -1,3 +1,6 @@
+body{
+	background-attachment: fixed;
+}
 .header{
     left: 0;
     top: 0;
