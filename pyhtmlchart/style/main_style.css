@@ -1,0 +1,99 @@
+body{
+    background-attachment: fixed;
+}
+.header{
+    background-color: white;
+    color: black;
+    text-align: center;
+    overflow: auto;
+    padding: 10px;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+.header a{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+}
+.header a:hover{
+    background-color: dodgerblue;
+}
+.bar{
+    background-color: white;
+    color: black;
+    overflow: auto;
+    padding: 10px;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.bar img{
+    border: 10px solid black;
+    border-radius: 5px;
+}
+.bar a{
+    color: orange;
+}
+.bar a:hover{
+    color: blue;
+}
+.highlight{
+    background-color: lightgrey;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+.one_line_code{
+    background-color: black;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    font-family: monospace;
+    overflow: auto;
+    border-bottom: 0px;
+    border-top: 0px;
+}
+.code{
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.button a{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+    float: left;
+}
+.button a:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+.footer{
+    background-color: white;
+    color: black;
+    text-align: center;
+    overflow: auto;
+    padding: 10px;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.footer a{
+    color: orange;
+}
+.footer a:hover{
+    color: blue;
+}

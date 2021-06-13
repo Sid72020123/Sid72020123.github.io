@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>
+            pyhtmlchart - Home
+        </title>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name="description" content="pyhtmlchart - Python Library to create and display Google Charts.">
+        <link rel = "icon" href = "logo.svg">
+        <link rel = "stylesheet" href = "style/main_style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body background="background.jpg" style = "background-size: 100%;">
+        <div class = "header">
+            <img src = "logo.svg"><br>
+            <span onclick = "show()" style = "font-family: monospace;">pyhtmlchart</span><br>
+            <div id = "help" style = "font-size: 20px; color: red; text-decoration: underline; display: none;">
+                Python Library to display Google Charts
+            </div>
+            <div style = "color: purple; font-size: 20px;">Home Page</div>
+            <a href = "index.html">Home</a>
+            <a href = "tutorial.html">Tutorial</a>
+            <a href = "history.html">History</a>
+            <a href = "help.html">Help</a>
+        </div><br>
+        <div class = "bar">
+            <div id = "pyhtmlchart" style = "text-align: center; font-size: 40px; color: blue;">pyhtmlchart</div><br>
+            <div id = "basic-introduction" style = "color: black; font-size: 25px;">
+                pyhtmlchart is a Python library to make Google Charts in Python! This library uses  <a href = "https://developers.google.com/chart" target = "_blank">Google Charts</a> to visualize data.
+                This library is easy to use. Using pyhtmlchart you can create many charts such as: 
+                <ul>
+                    <li>Line Chart</li>
+                    <li>Column Chart</li>
+                    <li>Bar Chart</li>
+                    <li>Area Chart</li>
+                    <li>Pie Chart</li>
+                    <li>Graphical Table</li>
+                    <li>Multiple Charts</li>
+                </ul>
+            </div>
+            <div id = "introduction">
+                <div style = "color: green; text-align: center; font-size: 35px;">Introduction</div><br>
+                <div style = "font-size: 25px;">
+                    <span style = "color: blue;">pythmlchart</span> is a Python library to make Google Charts in Python! This library uses  <a href = "https://developers.google.com/chart" target = "_blank">Google Charts</a> to visualize data.
+                    This library is easy to use. When you make a chart, it is stored as a <span class = "highlight">.html</span> file and it opens automatically. The chart also has a auto update feature which automatically updates a chart!
+                </div>
+            </div><br>
+
+            <div id = "installation">
+                <div style = "color: green; text-align: center; font-size: 35px;">Installation</div><br>
+                <div style = "font-size: 25px;">
+                   To install <span style = "color: blue;">pyhtmlchart</span> type <span class = "highlight">pip install pyhtmlchart</span> in the command prompt.<br><br>
+                </div>
+            </div><br>
+
+            <div id = "import">
+                <div style = "color: green; text-align: center; font-size: 35px;">Import</div><br>
+                <div style = "font-size: 25px;">
+                    Type <span class = "one_line_code"><span style = "color: orange;">import</span> pyhtmlchart</span> to import the module.
+                    After installing try the code below.
+                </div>
+            </div><br>
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-simple-chart">
+                <div style = "color: green; text-align: center; font-size: 35px;">Making Simple Charts:</div><br>
+            </div>
+            Following are some programs to make some simple charts:
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-line-chart" style = "color: red; text-align: center; font-size: 35px;">Line Chart</div><br>
+                Code to make a simple Line Chart:<br>
+                <div class = "code">
+                    <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                    line_chart = chart.line_chart.LineChart(location=<span style = "color: lightgreen;">'line'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                    columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                    all_data = [[1, 200, 300], [2, 500, 400]]<br>
+                    line_chart.add_data(data=all_data, data_titles=columns)<br>
+                    line_chart.open()
+                </div><br>
+                The above code will open the following chart in the browser:<br>
+                <img src = "images/simple_line_chart.png" width = "500"><br>
+                <center class = "button"><a href = "line_chart.html">Learn more about Line Chart</a></center>
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-column-chart" style = "color: red; text-align: center; font-size: 35px;">Column Chart</div><br>
+                Code to make a simple Column Chart:<br>
+                <div class = "code">
+                    <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                    column_chart = chart.column_chart.ColumnChart(location=<span style = "color: lightgreen;">'column'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                    columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                    all_data = [[1, 200, 300], [2, 500, 400]]<br>
+                    column_chart.add_data(data=all_data, data_titles=columns)<br>
+                    column_chart.open()
+                </div><br>
+                The above code will open the following chart in the browser:<br>
+                <img src = "images/simple_column_chart.png" width = "500"><br>
+                <center class = "button"><a href = "column_chart.html">Learn more about Column Chart</a></center>
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-area-chart" style = "color: red; text-align: center; font-size: 35px;">Area Chart</div><br>
+                Code to make a simple Area Chart:<br>
+                <div class = "code">
+                    <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                    area_chart = chart.area_chart.AreaChart(location=<span style = "color: lightgreen;">'area'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                    columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                    all_data = [[1, 200, 300], [2, 300, 500], [3, 100, 200]]<br>
+                    area_chart.add_data(data=all_data, data_titles=columns)<br>
+                    area_chart.open()
+                </div><br>
+                The above code will open the following chart in the browser:<br>
+                <img src = "images/simple_area_chart.png" width = "500"><br>
+                <center class = "button"><a href = "area_chart.html">Learn more about Area Chart</a></center>
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-bar-chart" style = "color: red; text-align: center; font-size: 35px;">Bar Chart</div><br>
+                Code to make a simple Bar Chart:<br>
+                <div class = "code">
+                    <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                    bar_chart = chart.bar_chart.BarChart(location=<span style = "color: lightgreen;">'bar'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                    columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                    all_data = [[1, 200, 300], [2, 500, 400]]<br>
+                    bar_chart.add_data(data=all_data, data_titles=columns)<br>
+                    bar_chart.open()
+                </div><br>
+                The above code will open the following chart in the browser:<br>
+                <img src = "images/simple_bar_chart.png" width = "500"><br>
+                <center class = "button"><a href = "bar_chart.html">Learn more about Bar Chart</a></center>
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-pie-chart" style = "color: red; text-align: center; font-size: 35px;">Pie Chart</div><br>
+                Code to make a simple Pie Chart:<br>
+                <div class = "code">
+                    <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                    pie_chart = chart.pie_chart.PieChart(location=<span style = "color: lightgreen;">'pie'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                    columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>]<br>
+                    all_data = [[<span style = "color: lightgreen;">'1'</span>, 200], [<span style = "color: lightgreen;">'2'</span>, 500]]<br>
+                    pie_chart.add_data(data=all_data, data_titles=columns)<br>
+                    pie_chart.open()
+                </div><br>
+                The above code will open the following chart in the browser:<br>
+                <img src = "images/simple_pie_chart.png" width = "500"><br>
+                <center class = "button"><a href = "pie_chart.html">Learn more about Pie Chart</a></center>
+        </div><br>
+
+        <div class = "bar">
+            <div id = "making-table" style = "color: red; text-align: center; font-size: 35px;">Simple Table:</div><br>
+                Code to make a simple Table:<br>
+                <div class = "code">
+                    <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                    table = chart.table.Table(location=<span style = "color: lightgreen;">'table'</span>, title=<span style = "color: lightgreen;">'Table'</span>)<br>
+                    columns = [<span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                    all_data = [[1, 200], [2, 500]]<br>
+                    table.add_data(data=all_data, columns=columns)<br>
+                    table.open()
+                </div><br>
+                The above code will open the following table in the browser:<br>
+                <img src = "images/simple_table.png" width = "500"><br>
+                <center class = "button"><a href = "table.html">Learn more about Table</a></center>
+        </div><br>
+
+        <div class = "footer">
+            <div style = "color: red; text-align: center;">This Website is Made By: <span style = "color: blue;">Siddhesh Chavan</span></div>
+            Visit the main website <a href = "https://sid72020123.github.io/" target = "_blank">here</a><br>
+            <span style = "text-align: center; color: black; font-size: 20px; border-bottom: 5px solid gray; width: fit-content;">CONTACT INFO:</span><br><br>
+            <a href = "https://pypi.org/user/Sid72020123/" target = "_blank"><img src = "python.svg" width = "30" height = "30" style = "border: 5px solid black; border-radius: 50px; padding: 5px;"></a>
+            <a href = "https://scratch.mit.edu/users/Sid72020123/" target = "_blank"><img src = "scratch.svg" width = "50" height = "50"></a>
+            <a href = "https://www.youtube.com/channel/UCWcSxfT-SbqAktvGAsrtadQ" target = "_blank"><img src = "youtube.svg" width = "50" height = "50"></a>
+            <a href = "https://github.com/Sid72020123" target = "_blank"><img src = "github.svg" width = "50" height = "50"></a>
+            <a href = "mailto:siddheshchavan2020@gmail.com" target = "_blank"><img src = "email.svg" style = "border: 5px solid black; border-radius: 10px; padding: 3px;" width = "35" height = "35"></a><br>
+            <a style = "font-size: 20px; color: gray;" href = "https://sid72020123.github.io/copyright.html">Copyright &copy; Siddhesh Chavan</a>
+        </div>
+    </body>
+    <script>
+        function show(){
+            document.getElementById("help").style.display = "block";
+        }
+    </script>
+</html>

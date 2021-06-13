@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>
+            pyhtmlchart - Bar Chart
+        </title>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name="description" content="pyhtmlchart - Make a Bar Chart">
+        <link rel = "icon" href = "logo.svg">
+        <link rel = "stylesheet" href = "style/main_style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body background="background.jpg" style = "background-size: 100%;">
+        <div class = "header">
+            <img src = "logo.svg"><br>
+            <span onclick = "show()" style = "font-family: monospace;">pyhtmlchart</span><br>
+            <div id = "help" style = "font-size: 20px; color: red; text-decoration: underline; display: none;">
+                Python Library to display Google Charts
+            </div>
+            <div style = "color: purple; font-size: 20px;">Bar Chart Page</div>
+            <a href = "index.html">Home</a>
+            <a href = "tutorial.html">Tutorial</a>
+            <a href = "history.html">History</a>
+            <a href = "help.html">Help</a>
+        </div><br>
+
+        <div class = "bar" style = "color: blue; font-size: 30px; text-align: center;">Bar Chart</div><br>
+
+        <div class = "bar">
+           To make a Simple Bar Chart with <span style = "color: blue;">pyhtmlchart</span>. Follow the given code below:<br>
+           <div class = "code">
+                <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                bar_chart = chart.bar_chart.BarChart(location=<span style = "color: lightgreen;">'bar'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                all_data = [[1, 200, 300], [2, 500, 400]]<br>
+                bar_chart.add_data(data=all_data, data_titles=columns)<br>
+                bar_chart.open()
+            </div><br>
+            The above code will open the following chart in the browser:<br>
+            <img src = "images/simple_bar_chart.png" width = "500"><br>
+            <div style = "color: red; text-align: center; font-size: 30px;">Explanation:</div>
+            <ul>
+                <li>The First line imports the library.</li>
+                <li>The Second line creates a <span class = "highlight">chart</span> object from the <span class = "highlight">chart.bar_chart.BarChart</span>class already defined in the library!</li>
+                <li>The Third line is a <span class = "highlight">columns</span> list which contains all the columns to be added to the chart. Take a note that the first item in the list will be used for <span class = "highlight">X</span> axis of the chart.</li>
+                <li>The Fourth line is a nested list <span class = "highlight">data</span> which contains all the data. Make sure that the list should be nested and contain the data to be added. Also the length of the columns should be equal to the length of a list in the nested data list as given in the above code.</li>
+                <li>The Fifth line is to add the data to the chart where <span class = "highlight">data=</span> the data to be added and <span class = "highlight">data_titles=</span> the columns to be added.</li>
+                <li>The Sixth line is to open the saved chart automatically. If the chart is not opened then go to the given save location and open it.</li>
+            </ul>
+            <div style = "color: red; text-align: center; font-size: 30px;">The BarChart Class:</div>
+            <div style = "color: green; text-align: center; font-size: 25px;">Parameters:</div><br>
+            The bar chart class is the class to make a bar chart. It contains following parameters:
+            <ol>
+                <li><span class = "highlight">location</span> :- The location of the chart to be saved.</li><br>
+                <li><span class = "highlight">title</span> :- The title of the chart.</li><br>
+                <li><span class = "highlight">background_color</span> :- The background color of the chart.</li><br>
+                <li><span class = "highlight">legend_position</span> :- The legend position of the chart. It's values can be <span class = "highlight">'top', 'bottom', 'right'</span></li><br>
+                <li><span class = "highlight">width</span> :- The width of the chart.</li><br>
+                <li><span class = "highlight">height</span> :- The height to the chart.</li><br>
+                <li><span class = "highlight">chart_actions</span> :- Chart Actions such as pan and zoom. Set it to <span class = "highlight">True</span> if you want chart actions.</li><br>
+                <li><span class = "highlight">y_axis_title</span> :- The title of the Y axis of the chart.</li><br>
+                <li><span class = "highlight">x_axis_title</span> :- The title of the X axis of the chart.</li><br>
+                <li><span class = "highlight">color</span> :- The list of all colors to be added in the chart.</li><br>
+                <li><span class = "highlight">bar_width</span> :- The width of the bar in bar chart.</li><br>
+                <li><span class = "highlight">print_log</span> :- Set it to <span class = "highlight">True</span> if you want the chart log to be printed out.</li>
+            </ol>
+            <div style = "color: green; text-align: center; font-size: 25px;">Functions:</div>
+                <span style = "color: red; font-family: monospace;">add_data(data, data_titles)</span> :- <blockquote style = "border-left: 5px solid black; padding-left: 5px; background-color: gainsboro;">The function to add the data to the chart. Check the above code to understand it.</blockquote>
+                <span style = "color: red; font-family: monospace;">enable_auto_update(time=5000)</span> :- <blockquote style = "border-left: 5px solid black; padding-left: 5px; background-color: gainsboro;">The function to enable the auto update to the chart. Give the time parameter an 'int' value in milliseconds.</blockquote>
+                <span style = "color: red; font-family: monospace;">disable_auto_update()</span> :- <blockquote style = "border-left: 5px solid black; padding-left: 5px; background-color: gainsboro;">The function to disable auto update to the chart.</blockquote>
+                <span style = "color: red; font-family: monospace;">update_data(data, append=False, wait=True)</span> :- <blockquote style = "border-left: 5px solid black; padding-left: 5px; background-color: gainsboro;">The function to update the given data. Give the <span class = "highlight">data</span> parameter the nested list to be added. Set <span class = "highlight">append</span> to <span class = "highlight">True</span> if you want the data to append and set <span class = "highlight">wait</span> to <span class = "highlight">True</span> if you want the program to wait for the update time and then update the data.</blockquote>
+                <span style = "color: red; font-family: monospace;">open()</span> :- <blockquote style = "border-left: 5px solid black; padding-left: 5px; background-color: gainsboro;">The function to automatically open the chart in the browser.</blockquote>
+                <span style = "color: red; font-family: monospace;">print_chart_settings()</span> :- <blockquote style = "border-left: 5px solid black; padding-left: 5px; background-color: gainsboro;">The function to print the chart settings.</blockquote>
+        </div><br>
+        <div class = "bar">
+            <div style = "color: green; text-align: center; font-size: 25px;">Making a simple auto update chart:</div><br>
+            Following is a simple code that auto updates a chart using random values:
+            <div class = "code">
+                <span style = "color: orange;">import</span> pyhtmlchart <span style = "color: orange;">as</span> chart<br>
+                <span style = "color: orange;">import</span> random<br>
+                bar_chart = chart.bar_chart.BarChart(location=<span style = "color: lightgreen;">'bar'</span>, title=<span style = "color: lightgreen;">'Chart'</span>)<br>
+                columns = [<span style = "color: lightgreen;">'Time'</span>, <span style = "color: lightgreen;">'Number1'</span>, <span style = "color: lightgreen;">'Number2'</span>]<br>
+                all_data = [[1, 200, 300], [2, 500, 400]]<br>
+                bar_chart.add_data(data=all_data, data_titles=columns)<br>
+                bar_chart.enable_auto_update(time=5000)<br>
+                bar_chart.open()<br><br>
+                i = 3<br>
+                <span style = "color: orange;">while True</span>:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;data = [i, random.randint(1, 1000), random.randint(1, 1000)]<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;bar_chart.update_data(data=[data], append=<span style = "color: orange;">True</span>)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;i += 1
+            </div><br>
+        </div><br>
+
+        <div class = "bar">
+            <div style = "color: red; text-align: center; font-size: 30px;">Multiple Charts:</div>
+            To display multiple charts on one page go to <a href = "multiple_charts.html">Multiple Charts Tutorial</a>.
+        </div><br>
+
+        <div class = "footer">
+            <div style = "color: red; text-align: center;">This Website is Made By: <span style = "color: blue;">Siddhesh Chavan</span></div>
+            Visit the main website <a href = "https://sid72020123.github.io/" target = "_blank">here</a><br>
+            <span style = "text-align: center; color: black; font-size: 20px; border-bottom: 5px solid gray; width: fit-content;">CONTACT INFO:</span><br><br>
+            <a href = "https://pypi.org/user/Sid72020123/" target = "_blank"><img src = "python.svg" width = "30" height = "30" style = "border: 5px solid black; border-radius: 50px; padding: 5px;"></a>
+            <a href = "https://scratch.mit.edu/users/Sid72020123/" target = "_blank"><img src = "scratch.svg" width = "50" height = "50"></a>
+            <a href = "https://www.youtube.com/channel/UCWcSxfT-SbqAktvGAsrtadQ" target = "_blank"><img src = "youtube.svg" width = "50" height = "50"></a>
+            <a href = "https://github.com/Sid72020123" target = "_blank"><img src = "github.svg" width = "50" height = "50"></a>
+            <a href = "mailto:siddheshchavan2020@gmail.com" target = "_blank"><img src = "email.svg" style = "border: 5px solid black; border-radius: 10px; padding: 3px;" width = "35" height = "35"></a><br>
+            <a style = "font-size: 20px; color: gray;" href = "https://sid72020123.github.io/copyright.html">Copyright &copy; Siddhesh Chavan</a>
+        </div>
+    </body>
+    <script>
+        function show(){
+            document.getElementById("help").style.display = "block";
+        }
+    </script>
+</html>
