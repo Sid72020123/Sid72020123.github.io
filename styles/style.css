@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  color: white;
+  text-align: center;
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background: url('/background.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  background-color: black;
+  padding: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  /* Below 2 lines taken from stackoverflow */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0px 0px 30px #fff;
+}
+
+.header img {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+  float: left;
+}
+
+.header a {
+  float: left;
+  text-decoration: none;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 5px;
+  border: 1px solid white;
+}
+
+.header a:hover {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.bar {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  overflow: auto;
+  width: 99%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#my_skills label {
+  margin-right: 10px;
+}
+
+#my_skills progress {
+  border-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: orange;
+}
+.link:hover {
+  color: lightblue;
+  text-decoration: underline;
+}
+
+.repo_card {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  overflow: auto;
+  width: 500px;
+  height: 300px;
+}
+
+.footer {
+  background-color: black;
+  padding: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 99%;
+  margin: 0;
+  /* Below 2 lines taken from stackoverflow */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0px 0px 30px #fff;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    position: relative;
+  }
+}

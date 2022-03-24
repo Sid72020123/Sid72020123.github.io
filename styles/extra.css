@@ -1,0 +1,32 @@
+.text-blue {
+  color: lightblue;
+}
+
+.text-green {
+  color: lightgreen;
+}
+.text-red {
+  color: lightcoral;
+}
+.text-yellow {
+  color: lightyellow;
+}
+
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.font-small {
+  font-size: 10px;
+}
+.font-medium {
+  font-size: 15px;
+}
+.font-large {
+  font-size: 30px;
+}
