@@ -20,7 +20,6 @@ body {
   margin: 0;
   top: 0;
   left: 0;
-  position: fixed;
   z-index: 1;
   /* Below 2 lines taken from stackoverflow */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -121,10 +120,4 @@ body {
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   box-shadow: 0px 0px 30px #fff;
   color: white;
-}
-
-@media only screen and (max-width: 700px) {
-  .header {
-    position: relative;
-  }
 }
